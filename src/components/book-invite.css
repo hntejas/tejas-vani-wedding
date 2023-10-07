@@ -14,26 +14,6 @@
   max-width: 300px;
 }
 
-/* .content{
-  transform: translate(-50%, -50%) scale(0.2);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  animation-name: zoomInAnimation;
-  animation-duration: 0.5s; 
-  animation-fill-mode: forwards;
-}
-
-@keyframes content {
-  0% {
-    transform: translate(-50%, -50%) scale(0.2);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-} */
-
 .page {
   width: 75vw;
   height: 75vw;
@@ -125,19 +105,15 @@
     transform: rotateX(180deg);
   }
   100% {
-    transform: rotateX(0); /* Flip the page down */
+    transform: rotateX(0);
   }
 }
 
 .content {
-  font-family: "Satisfy", cursive;
+  font-family: "Kalam", cursive;
   text-align: center;
-  /* animation: contentShow 1s ease-in-out;
-  animation-name: contentShow;
-  animation-duration: 1.2s; 
-  animation-delay: 0.2s; 
-  animation-fill-mode: forwards; 
-  opacity: 0; */
+  color: #8e0a05;
+  padding: 0 8px;
 }
 
 h2 {
@@ -188,4 +164,8 @@ hr {
 .map-logo {
   margin-top: 16px;
   max-width: 50px;
+}
+
+.page-1-text {
+  line-height: 140%;
 }
