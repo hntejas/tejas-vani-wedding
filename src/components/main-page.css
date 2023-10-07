@@ -9,7 +9,7 @@
 
 .names {
   box-sizing: border-box;
-  background-image: url("images/wood-bg.png");
+  background-image: url("/images/wood-bg.png");
   font-family: "Satisfy", cursive;
   color: #944158;
   text-align: center;
@@ -24,7 +24,7 @@
 
 .date {
   box-sizing: border-box;
-  background-image: url("images/wood-bg.png");
+  background-image: url("/images/wood-bg.png");
   font-family: "Satisfy", cursive;
   color: #944158;
   text-align: center;
