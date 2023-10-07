@@ -1,4 +1,4 @@
-.book-cover{
+.book-cover {
   width: 75vw;
   height: 75vw;
   position: relative;
@@ -7,10 +7,10 @@
   max-height: 500px;
 }
 
-.names{
+.names {
   box-sizing: border-box;
   background-image: url("images/wood-bg.png");
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   color: #944158;
   text-align: center;
   border: 3px solid #944158;
@@ -19,13 +19,13 @@
   position: absolute;
   top: calc(50% - 28px);
   width: 100%;
-  z-index:1;
+  z-index: 1;
 }
 
-.date{
+.date {
   box-sizing: border-box;
   background-image: url("images/wood-bg.png");
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   color: #944158;
   text-align: center;
   border: 3px solid #944158;
@@ -35,10 +35,14 @@
   position: absolute;
   left: calc(50% - 75px);
   max-width: 80%;
-  z-index:1;
+  z-index: 1;
   margin-top: 40px;
 }
 
 .book-cover img {
   width: 100%;
+}
+
+.hide {
+  display: none;
 }
