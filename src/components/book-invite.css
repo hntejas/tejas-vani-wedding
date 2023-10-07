@@ -11,7 +11,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .page {
@@ -22,8 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .psuedoBook {
@@ -34,7 +34,7 @@
   left: 0;
   top: 0;
   z-index: 10;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .psuedoBook::before {
@@ -56,8 +56,8 @@
   animation-duration: 1s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 @keyframes openBook {
