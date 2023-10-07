@@ -1,0 +1,42 @@
+.two-sided-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.two-sided-card.flipped,
+.two-sided-card.flipped-back {
+  transform-origin: top center;
+}
+
+.two-sided-card.flipped {
+  transform: rotateX(180deg);
+}
+
+.two-sided-card.flipped-back {
+  transform: rotateX(180deg); /* Rotate back to the initial position */
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+}
+
+.card-back {
+  background-color: #00bcd4;
+  transform: rotateX(180deg);
+  color: white;
+}

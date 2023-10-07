@@ -1,0 +1,193 @@
+.invite-wrapper{
+  position: relative;
+}
+
+.book {
+  width: 75vw;
+  perspective: 600px;
+  max-width: 500px;
+  animation: contentShow 1s ease-in-out;
+  animation-name: justAppear;
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+  opacity: 0;
+  max-width: 300px;
+}
+
+/* .content{
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation-name: zoomInAnimation;
+  animation-duration: 0.5s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes content {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+} */
+
+.page {
+  width: 75vw;
+  height: 75vw;
+  border-radius: 20px;
+  background-image: url("images/wood-bg.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.psuedoBook {
+  width: 75vw;
+  height: calc(2 * 75vw);
+  perspective: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  max-width: 300px;
+}
+
+.psuedoBook::before {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background-image: url("images/wood-bg.png");
+  color: #E9BC95;
+  opacity: 0.7;
+  border-radius: 20px;
+  transform-origin: center top;
+  transform: rotateX(0deg);
+  transition: transform 0.7s ease;
+  animation-name: openBook;
+  animation-duration: 1s; 
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@keyframes openBook {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+
+.psuedoBookDown {
+  width: 75vw;
+  height: calc(2 * 75vw);
+  perspective: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.psuedoBookDown::before {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  left: 0;
+  background-image: url("images/wood-bg.png");
+  color: #E9BC95;
+  opacity: 0.7;
+  border-radius: 20px;
+  transform-origin: top;
+  transform: rotateX(180deg);
+  transition: transform 0.7s ease in;
+  animation-name: openBookDown;
+  animation-duration: 1s; 
+  animation-delay: 0s; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes openBookDown {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0); /* Flip the page down */
+  }
+}
+
+
+.content {
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  /* animation: contentShow 1s ease-in-out;
+  animation-name: contentShow;
+  animation-duration: 1.2s; 
+  animation-delay: 0.2s; 
+  animation-fill-mode: forwards; 
+  opacity: 0; */
+}
+
+h2 {
+  margin: 8px;
+}
+
+h1 {
+  margin: 4px;
+}
+
+hr {
+  margin: 16px;
+}
+
+.content-show-animation {
+  animation: contentShow 1s ease-in-out;
+  animation-name: contentShow;
+  animation-duration: 1.2s; 
+  animation-delay: 0.2s; 
+  animation-fill-mode: forwards; 
+  opacity: 0;
+}
+
+@keyframes contentShow {
+  0% {
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes justAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-1{
+  max-width: 85%;
+}
+
+.map-logo {
+  margin-top: 16px;
+  max-width: 50px;
+}
