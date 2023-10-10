@@ -110,7 +110,7 @@ const BookInvite = () => {
     if (autoIsOn) {
       timerRef.current = setTimeout(() => {
         autoIsOn && handleBottomPageClick({}, true);
-      }, 4000);
+      }, 6000);
     }
 
     if (currentPage === PAGES.length - 1 && autoIsOn) {
