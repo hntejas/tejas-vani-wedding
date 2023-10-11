@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="wrapper">
-      <audio autoPlay loop>
+      <audio autoPlay loop preload>
         <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
       </audio>
       <header />
