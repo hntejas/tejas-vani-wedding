@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import "./App.css";
 import MainPage from "./components/MainPage";
 import BookInvite from "./components/BookInvite";
-// import ReactAudioPlayer from "react-audio-player";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
@@ -27,9 +27,11 @@ export default function App() {
 
   return (
     <div className="wrapper">
-      <audio loop autoPlay>
-        <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
-      </audio>
+      <ReactAudioPlayer
+        src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
+        autoPlay
+        loop
+      />
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
       {showInvite && <BookInvite />}
