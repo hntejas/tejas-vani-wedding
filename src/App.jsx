@@ -26,7 +26,6 @@ export default function App() {
 
     setTimeout(() => {
       const audio = document.getElementById("audio-player");
-
       audio?.play();
     }, 2000);
   }, []);
@@ -43,6 +42,7 @@ export default function App() {
           <source
             src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
             type="audio/mpeg"
+            muted={true}
           />
         </audio>
         {/* {showAudio && (
