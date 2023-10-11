@@ -181,3 +181,25 @@ hr {
   max-width: 85%;
   margin-top: 8px;
 }
+
+@media (min-width: 801px) {
+  .book {
+    max-width: calc(50vh - 10vh);
+  }
+  .page {
+    max-width: calc(50vh - 10vh);
+    max-height: calc(50vh - 10vh);
+  }
+  .psuedoBook {
+    display: none;
+  }
+  .psuedoBookDown {
+    display: none;
+  }
+  .psuedoBook::before {
+    display: none;
+  }
+  .psuedoBookDown::before {
+    display: none;
+  }
+}
