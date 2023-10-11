@@ -25,7 +25,9 @@ export default function App() {
     }, 3000);
 
     setTimeout(() => {
-      setShowAudio(true);
+      const audio = document.getElementById("audio-player");
+
+      audio?.play();
     }, 2000);
   }, []);
 
@@ -37,13 +39,13 @@ export default function App() {
       <footer />
 
       <div className="audio-player">
-        {/* <video controls="" autoplay="" name="media">
+        <audio autoPlay loop id="audio-player">
           <source
             src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
             type="audio/mpeg"
           />
-        </video> */}
-        {showAudio && (
+        </audio>
+        {/* {showAudio && (
           <ReactPlayer
             url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
             playing={true} // Autoplay the audio
@@ -51,7 +53,7 @@ export default function App() {
             controls={false} // Hide player controls
             showinfo={false} // Hide video title and uploader info
           />
-        )}
+        )} */}
       </div>
     </div>
   );
