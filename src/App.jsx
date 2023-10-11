@@ -34,7 +34,7 @@ export default function App() {
 
       <div className="audio-player">
         <embed
-          src="/audio/invitation-audio.mp3"
+          src="audio/invitation-audio.mp3"
           loop="true"
           autostart="true"
           width="2"
