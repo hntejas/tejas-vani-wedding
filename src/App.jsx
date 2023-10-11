@@ -6,7 +6,7 @@ import BookInvite from "./components/BookInvite";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
-  const audioRef = useRef();
+  // const audioRef = useRef();
 
   const handleSwitchToInvite = () => {
     const pages = document.querySelectorAll(".book-cover");
@@ -23,16 +23,12 @@ export default function App() {
     setTimeout(() => {
       handleSwitchToInvite();
     }, 3000);
-    audioRef.current?.play?.();
   }, []);
 
   return (
     <div className="wrapper">
-      <audio autoPlay loop ref={audioRef.current}>
-        <source
-          src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
-          type="audio/mpeg"
-        />
+      <audio loop autoPlay>
+        <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
       </audio>
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
