@@ -11,6 +11,7 @@ const MainPage = ({ handleClick }) => {
       <img className="hide" src="images/wood-bg.png" />
       <img className="hide" src="images/red-3.jpg" />
       <img className="hide" src="images/pattern-top.jpg" />
+      <img className="hide" src="audio/invitation-audio.mp3" />
     </div>
   );
 };
