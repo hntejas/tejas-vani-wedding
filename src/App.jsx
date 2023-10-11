@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
-  // const audioRef = useRef();
+  const [showAudio, setShowAudio] = useState(false);
 
   const handleSwitchToInvite = () => {
     const pages = document.querySelectorAll(".book-cover");
@@ -23,6 +23,10 @@ export default function App() {
     setTimeout(() => {
       handleSwitchToInvite();
     }, 3000);
+
+    setTimeout(() => {
+      setShowAudio(true);
+    }, 1000);
   }, []);
 
   return (
@@ -33,20 +37,21 @@ export default function App() {
       <footer />
 
       <div className="audio-player">
-        <embed
-          src="audio/invitation-audio.mp3"
-          loop="true"
-          autostart="true"
-          width="2"
-          height="0"
-        />
-        {/* <ReactPlayer
-          url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
-          playing={true} // Autoplay the audio
-          loop={true} // Loop the audio
-          controls={false} // Hide player controls
-          showinfo={false} // Hide video title and uploader info
-        /> */}
+        {/* <video controls="" autoplay="" name="media">
+          <source
+            src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
+            type="audio/mpeg"
+          />
+        </video> */}
+        {showAudio && (
+          <ReactPlayer
+            url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
+            playing={true} // Autoplay the audio
+            loop={true} // Loop the audio
+            controls={false} // Hide player controls
+            showinfo={false} // Hide video title and uploader info
+          />
+        )}
       </div>
     </div>
   );
