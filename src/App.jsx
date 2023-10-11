@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import "./App.css";
 import MainPage from "./components/MainPage";
 import BookInvite from "./components/BookInvite";
-import ReactAudioPlayer from "react-audio-player";
+import ReactPlayer from "react-player";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
@@ -27,11 +27,15 @@ export default function App() {
 
   return (
     <div className="wrapper">
-      <ReactAudioPlayer
-        src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
-        autoPlay
-        loop
-      />
+      <div className="audio-player">
+        <ReactPlayer
+          url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
+          playing={true} // Autoplay the audio
+          loop={true} // Loop the audio
+          controls={false} // Hide player controls
+          showinfo={false} // Hide video title and uploader info
+        />
+      </div>
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
       {showInvite && <BookInvite />}
