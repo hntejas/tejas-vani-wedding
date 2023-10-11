@@ -5,7 +5,8 @@ const PAGES = [
   {
     top: (
       <div className="content">
-        <img className="image-1" src="images/page-1-top.png" />
+        <img className="image-1-bg" src="images/toran-bg.png" />
+        <img className="image-1-top" src="images/page-1-top.png" />
       </div>
     ),
     bottom: (
@@ -41,7 +42,7 @@ const PAGES = [
     ),
     bottom: (
       <div className="content">
-        <h2>Shivabalayougi kalyana mantapa (upper hall)</h2>
+        <h2>Shivabalayogi Kalyana Mantapa (Upper Hall)</h2>
         <h3>6th Main Rd, 3rd Phase, J. P. Nagar, Bengaluru</h3>
         <a href="https://maps.app.goo.gl/qhL2AyNoRoVK9fEZA">
           <img className="map-logo" src="images/g-map.png" />

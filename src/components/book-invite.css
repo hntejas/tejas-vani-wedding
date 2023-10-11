@@ -169,3 +169,15 @@ hr {
 .page-1-text {
   line-height: 140%;
 }
+
+.image-1-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -8%;
+}
+
+.image-1-top {
+  max-width: 85%;
+  margin-top: 8px;
+}
