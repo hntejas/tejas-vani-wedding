@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="wrapper">
-      {/* <ReactAudioPlayer src="/audio/invitation-audio.mp3" autoPlay loop /> */}
+      <ReactAudioPlayer src="/audio/invitation-audio.mp3" autoPlay loop />
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
       {showInvite && <BookInvite />}
