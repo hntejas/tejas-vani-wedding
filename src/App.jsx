@@ -29,7 +29,10 @@ export default function App() {
   return (
     <div className="wrapper">
       <audio autoPlay loop ref={audioRef.current}>
-        <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
+        <source
+          src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
+          type="audio/mpeg"
+        />
       </audio>
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
