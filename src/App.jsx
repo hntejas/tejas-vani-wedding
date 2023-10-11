@@ -34,7 +34,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" onClick={handleSwitchToInvite}>
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
       {showInvite && <BookInvite />}
