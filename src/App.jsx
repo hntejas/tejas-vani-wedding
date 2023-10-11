@@ -24,9 +24,9 @@ export default function App() {
   };
 
   useState(() => {
-    setTimeout(() => {
-      handleSwitchToInvite();
-    }, 3000);
+    // setTimeout(() => {
+    //   handleSwitchToInvite();
+    // }, 3000);
     // setTimeout(() => {
     //   const audio = document.getElementById("audio-player");
     //   audio?.play();
