@@ -27,6 +27,11 @@ export default function App() {
 
   return (
     <div className="wrapper">
+      <header />
+      {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
+      {showInvite && <BookInvite />}
+      <footer />
+
       <div className="audio-player">
         <ReactPlayer
           url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
@@ -36,10 +41,6 @@ export default function App() {
           showinfo={false} // Hide video title and uploader info
         />
       </div>
-      <header />
-      {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
-      {showInvite && <BookInvite />}
-      <footer />
     </div>
   );
 }
