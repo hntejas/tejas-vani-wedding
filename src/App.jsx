@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import MainPage from "./components/MainPage";
 import BookInvite from "./components/BookInvite";
@@ -6,6 +6,7 @@ import BookInvite from "./components/BookInvite";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
+  const audioRef = useRef();
 
   const handleSwitchToInvite = () => {
     const pages = document.querySelectorAll(".book-cover");
@@ -22,11 +23,12 @@ export default function App() {
     setTimeout(() => {
       handleSwitchToInvite();
     }, 3000);
+    audioRef.current?.play?.();
   }, []);
 
   return (
     <div className="wrapper">
-      <audio autoPlay loop preload>
+      <audio autoPlay loop preload ref={audioRef.current}>
         <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
       </audio>
       <header />
