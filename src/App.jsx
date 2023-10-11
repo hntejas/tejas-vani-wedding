@@ -26,7 +26,7 @@ export default function App() {
 
     setTimeout(() => {
       setShowAudio(true);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
