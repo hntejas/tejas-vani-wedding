@@ -41,7 +41,7 @@ export default function App() {
       <footer />
 
       <div className="audio-player">
-        <audio autoPlay loop id="audio-player" muted={showAudio}>
+        <audio autoPlay id="audio-player" muted={showAudio}>
           <source
             src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
             type="audio/mpeg"
