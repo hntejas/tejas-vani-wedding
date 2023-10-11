@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import MainPage from './components/MainPage';
-import BookInvite from './components/BookInvite';
+import { useEffect, useState } from "react";
+import "./App.css";
+import MainPage from "./components/MainPage";
+import BookInvite from "./components/BookInvite";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
@@ -15,24 +16,24 @@ export default function App() {
     setTimeout(() => {
       setShowInvite(true);
     }, 300);
-  }
+  };
 
   useState(() => {
     setTimeout(() => {
       handleSwitchToInvite();
-    }, 3000)
-  }, [])
+    }, 3000);
+  }, []);
 
   return (
     <div className="wrapper">
+      <ReactAudioPlayer src="/audio/invitation-audio.mp3" autoPlay loop />
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
       {showInvite && <BookInvite />}
       <footer />
     </div>
-  )
+  );
 }
-
 
 /** hi ididya hu yel hoithu chat hu
 yello clicked, ide thane https://meet.google.com/icu-jccf-xty
