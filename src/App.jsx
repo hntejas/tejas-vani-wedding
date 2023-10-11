@@ -33,13 +33,20 @@ export default function App() {
       <footer />
 
       <div className="audio-player">
-        <ReactPlayer
+        <embed
+          src="/audio/invitation-audio.mp3"
+          loop="true"
+          autostart="true"
+          width="2"
+          height="0"
+        />
+        {/* <ReactPlayer
           url="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3" // Replace with your audio file URL
           playing={true} // Autoplay the audio
           loop={true} // Loop the audio
           controls={false} // Hide player controls
           showinfo={false} // Hide video title and uploader info
-        />
+        /> */}
       </div>
     </div>
   );
