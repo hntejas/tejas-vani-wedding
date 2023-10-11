@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className="wrapper">
       <audio autoPlay loop>
-        <source src="/audio/invitation-audio.mp3" type="audio/mpeg" />
+        <source src="audio/invitation-audio.mp3" type="audio/mpeg" />
       </audio>
       <header />
       {!showInvite && <MainPage handleClick={handleSwitchToInvite} />}
