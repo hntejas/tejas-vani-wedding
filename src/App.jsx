@@ -6,10 +6,14 @@ import ReactPlayer from "react-player";
 
 export default function App() {
   const [showInvite, setShowInvite] = useState(false);
-  const [showAudio, setShowAudio] = useState(false);
+  const [showAudio, setShowAudio] = useState(true);
 
   const handleSwitchToInvite = () => {
     const pages = document.querySelectorAll(".book-cover");
+
+    const audio = document.getElementById("audio-player");
+    setShowAudio(false);
+    audio?.play();
 
     pages.forEach((page) => {
       page.classList.add("exit-animation");
@@ -23,11 +27,10 @@ export default function App() {
     setTimeout(() => {
       handleSwitchToInvite();
     }, 3000);
-
-    setTimeout(() => {
-      const audio = document.getElementById("audio-player");
-      audio?.play();
-    }, 2000);
+    // setTimeout(() => {
+    //   const audio = document.getElementById("audio-player");
+    //   audio?.play();
+    // }, 2000);
   }, []);
 
   return (
@@ -38,11 +41,10 @@ export default function App() {
       <footer />
 
       <div className="audio-player">
-        <audio autoPlay loop id="audio-player">
+        <audio autoPlay loop id="audio-player" muted={showAudio}>
           <source
             src="https://vanishree-weds-tejas.netlify.app/audio/invitation-audio.mp3"
             type="audio/mpeg"
-            muted={true}
           />
         </audio>
         {/* {showAudio && (
